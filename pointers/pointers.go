@@ -10,14 +10,14 @@ func pointerMagic(pointer *int) {
 
 func main() {
 	fifty := 50
-	one := &fifty
+	seven := &fifty
 	fmt.Println("Before pointerMagic")
 	fmt.Println("-------------------")
-	fmt.Println(one)
-	fmt.Println(*one)
-	pointerMagic(one)
+	fmt.Println(seven)
+	fmt.Println(*seven)
+	pointerMagic(seven)
 	fmt.Println("After pointerMagic")
 	fmt.Println("-------------------")
-	fmt.Println(one)
-	fmt.Println(*one)
+	fmt.Println(seven)
+	fmt.Println(*seven)
 }
