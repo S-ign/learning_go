@@ -50,6 +50,13 @@ func logErr(err error) {
 func main() {
 	date := Date{}
 	err := date.SetYear(2020)
+	//****************************************
+	//although our setter method helps with validation
+	//we can still directly alter the struct directly!
+	date.Year = -50
+	//we must put our Date type in its own package
+	//as an unexported struct.
+	//****************************************
 	logErr(err)
 
 	err = date.SetMonth(2)
