@@ -65,5 +65,5 @@ func main() {
 	err = date.SetDay(9)
 	logErr(err)
 
-	fmt.Println(date)
+	fmt.Println(date) //{-50, 2, 9}
 }
