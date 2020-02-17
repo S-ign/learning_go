@@ -11,13 +11,13 @@ type Date struct {
 	day     int
 }
 
-////////////DATE SETTERS////////////////////////////////////
+//DATE SETTERS/////////////////////////////////////////////
 //setter methods that validates arguments.
 //marking the reciever (*Date) a pointer is important
 //since the passed in argument will be lost since
 //we are not returning it.
 func (d *Date) SetYear(year int) error {
-	if year < 2000 {
+	if year < 1900 {
 		return errors.New("invalid year")
 	}
 	d.year = year
@@ -36,5 +36,17 @@ func (d *Date) SetDay(day int) error {
 	}
 	d.day = day
 	return nil
+}
+/*//////////////////////////////////////////////////////////
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//DATE GETTERS////////////////////////////////////////////*/
+func (d *Date) Year() int {
+	return d.year
+}
+func (d *Date) Month() int {
+	return d.month
+}
+func (d *Date) Day() int {
+	return d.day
 }
 ////////////////////////////////////////////////////////////
